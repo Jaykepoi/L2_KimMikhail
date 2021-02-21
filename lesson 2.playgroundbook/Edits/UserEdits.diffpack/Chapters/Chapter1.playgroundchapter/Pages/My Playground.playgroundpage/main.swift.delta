@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import Foundation
+print("                  Задание 1")
+func number(value:Int){ 
+        if value % 2 == 0{
+            print("Число",value,"Четное")
+        }else{
+            print ("Число",value,"Нечетное")
+        }
+    }
+for i in 15...25{
+    number(value:i)
+}
+
+    
+
+print("                  Задание 2")
+func number1(value1:Int){ 
+if value1 % 3 == 0{
+    print("Число",value1,"делится на 3")
+}else{
+    print("Число",value1,"не делится на 3")
+}
+}
+for i in 55...65{
+    number1(value1:i)
+}
+
+print("                  Задание 3")
+var a: Array&lt;Int&gt;=[]
+for i in 0...100 {
+    a.append(i)
+    
+}
+    print(a)
+
+print("                  Задание 4")
+
+
+for b in a where (b % 2 == 0) || (b % 3 != 0){
+    a.remove(at:(a.index(of:b)!))
+}
+print (a)
+    print("                  Задание 5")
+
+func fibonachiarr (_ n:Int) -&gt; [Double]{
+    var fib:[Double] = [1,1]
+    (2...n).forEach { i in
+        fib.append(fib[i-1]+fib[i-2])
+        
+    }
+    return fib
+}
+print(fibonachiarr(50))
+
+print("                  Задание 6")
+
+func isMultiple(_ num: Int, of divider: Int) -&gt; Bool {
+    return num % divider == 0
+}
+
+var integers: [Int] = [] 
+
+while integers.count != 100 { 
+    integers.append(integers.count+2)
+}
+
+var p: Int
+var index = 0
+while index &lt; integers.count - 1 {
+    p = integers[index] 
+    
+    for num in integers {
+        if (num != p) &amp;&amp; isMultiple(num, of: p){ 
+            integers.remove(at: integers.firstIndex(of: num)!) 
+            
+        }
+        
+    }
+    index += 1
+}
+
+print(integers)
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 1502}</string>
+			<key>OriginalContent</key>
+			<string>
+</string>
+			<key>OriginalRange</key>
+			<string>{0, 1}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
